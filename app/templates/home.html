@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style>
+    h1 {
+        text-align: center;
+        font-family: "Karma", sans-serif
+    }
+
+    .w3-bar-block .w3-bar-item {
+        padding: 20px
+    }
+    img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10%);
+    max-width: 500%;
+    max-height: 500%;
+    }
+</style>
+{% endblock %}
+
+{% block title %}
+Duke Sports Analytics Club
+{% endblock %}
+
+{% block content %}
+<img src="{{ url_for('static', filename='logo.jpg') }}" alt="club logo">
+{% endblock %}
