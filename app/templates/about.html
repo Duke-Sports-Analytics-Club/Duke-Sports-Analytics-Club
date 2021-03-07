@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+        font-family: "Karma", sans-serif
+    }
+
+    .w3-bar-block .w3-bar-item {
+        padding: 20px
+    }
+
+    .logo {
+        position: absolute;
+        max-width: 150%;
+        max-height: 150%;
+    }
+
+    .content {
+        float: left;
+        left: 20%;
+        position: absolute;
+        width: 65%;
+    }
+
+    p {
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+        overflow-wrap: break-word;
+    }
+</style>
+{% endblock %}
+
+{% block title %}
+About
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <p>{{ paragraph }}</p>
+</div>
+{% endblock %}

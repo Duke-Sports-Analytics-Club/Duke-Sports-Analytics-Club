@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+        font-family: "Karma", sans-serif
+    }
+
+    .w3-bar-block .w3-bar-item {
+        padding: 20px
+    }
+
+    .logo {
+        position: absolute;
+        max-width: 91%;
+        max-height: 91%;
+    }
+
+    .content {
+        float: left;
+        left: 20%;
+        position: absolute;
+        width: 65%;
+    }
+
+    p {
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+        overflow-wrap: break-word;
+    }
+</style>
+{% endblock %}
+
+{% block title %}
+Projects
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <a href="{{ url_for('ex1') }}">
+        <p>Example 1</p>
+    </a>
+</div>
+<br>
+<div class="content">
+    <a href="{{ url_for('ex2') }}">
+        <p>Example 2</p>
+    </a>
+</div>
+<br>
+<div class="content">
+    <a href="{{ url_for('ex3') }}">
+        <p>Example 3</p>
+    </a>
+</div>
+{% endblock %}
