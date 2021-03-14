@@ -10,7 +10,7 @@
     h5,
     h6 {
         text-align: center;
-        font-family: "Karma", sans-serif
+        font-family: "Karma", sans-serif;
     }
 
     .w3-bar-block .w3-bar-item {
@@ -18,9 +18,10 @@
     }
 
     .logo {
-        position: absolute;
-        max-width: 91%;
-        max-height: 91%;
+        position: fixed;
+        max-width: 20%;
+        max-height: 20%;
+        transform: translateX(-25%);
     }
 
     .content {
@@ -46,20 +47,8 @@ Projects
 
 {% block content %}
 <div class="content">
-    <a href="{{ url_for('ex1') }}">
-        <p>Example 1</p>
-    </a>
-</div>
-<br>
-<div class="content">
-    <a href="{{ url_for('ex2') }}">
-        <p>Example 2</p>
-    </a>
-</div>
-<br>
-<div class="content">
-    <a href="{{ url_for('ex3') }}">
-        <p>Example 3</p>
+    <a href="{{ url_for('tutorial_post') }}">
+        <p>Tutorial Post</p>
     </a>
 </div>
 {% endblock %}

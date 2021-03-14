@@ -1,5 +1,51 @@
 {% extends "base.html" %}
 
+{% block style %}
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+        font-family: "Karma", sans-serif
+    }
+
+    .w3-bar-block .w3-bar-item {
+        padding: 20px
+    }
+
+    .logo {
+        position: fixed;
+        max-width: 20%;
+        max-height: 20%;
+        transform: translateX(-25%);
+    }
+
+    .content {
+        float: left;
+        left: 20%;
+        position: absolute;
+        width: 65%;
+    }
+</style>
+{% endblock %}
+
 {% block title %}
 Duke Sports Analytics Club
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <a href="https://forms.gle/nskXF38NcSgS5V6p8">
+        <p>Click here to join</p>
+    </a>
+</div>
+<br>
+<br>
+<div class="content">
+    <p>Contact us: duke-sports-analytics-club@duke.edu</p>
+</div>
 {% endblock %}

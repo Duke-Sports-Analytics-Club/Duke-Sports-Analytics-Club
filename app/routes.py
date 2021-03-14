@@ -1,7 +1,5 @@
 from flask import render_template, request, url_for
 from app import app
-import string
-import random
 
 @app.route('/')
 @app.route('/home', methods=['GET', 'POST'])
@@ -10,9 +8,7 @@ def home():
 
 @app.route('/about', methods=['GET', 'POST'])
 def about():
-    random.seed(7)
-    p = "".join(random.choices(string.ascii_lowercase, k=500))
-    return render_template("about.html", paragraph=p)
+    return render_template("about.html")
 
 @app.route('/profiles', methods=['GET', 'POST'])
 def profiles():
@@ -20,18 +16,8 @@ def profiles():
 
 @app.route('/projects', methods=['GET', 'POST'])
 def projects():
-    if request.endpoint == url_for("ex1"):
-        return redirect(url_for("ex1"))
     return render_template("projects.html")
 
-@app.route('/ex1', methods=['GET', 'POST'])
-def ex1():
-    return render_template("ex1.html")
-
-@app.route('/ex2', methods=['GET', 'POST'])
-def ex2():
-    return render_template("ex2.html")
-
-@app.route('/ex3', methods=['GET', 'POST'])
-def ex3():
-    return render_template("ex3.html")
+@app.route('/tutorial_post', methods=['GET', 'POST'])
+def tutorial_post():
+    return render_template("tutorial_post.html")

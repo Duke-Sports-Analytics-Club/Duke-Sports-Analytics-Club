@@ -9,7 +9,7 @@
     h4,
     h5,
     h6 {
-        text-align: center;
+        text-align: left;
         font-family: "Karma", sans-serif
     }
 
@@ -18,9 +18,10 @@
     }
 
     .logo {
-        position: absolute;
-        max-width: 150%;
-        max-height: 150%;
+        position: fixed;
+        max-width: 20%;
+        max-height: 20%;
+        transform: translateX(-25%);
     }
 
     .content {
@@ -46,6 +47,12 @@ About
 
 {% block content %}
 <div class="content">
-    <p>{{ paragraph }}</p>
+    <p>Our mission is to foster a community in which anyone can get involved and apply their interest in sports analytics in
+    any capacity possible. Duke Sports Analytics Club will primarily be a platform in which people can do projects diving
+    into a sport or problem of their choice. Afterward, they could publish that research project in an article which would
+    be posted on our public facing website. We are also hoping to partner with Duke Athletics, allowing for dedicated
+    members who are interested in working with the athletic department to help our school. Furthermore, we will be creating
+    many opportunities for members to participate in sports analytics competitions, attend conferences, and get involved
+    with research in the field.</p>
 </div>
 {% endblock %}
