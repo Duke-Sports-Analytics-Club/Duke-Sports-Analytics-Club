@@ -14,8 +14,6 @@
     }
 
     p {
-        padding-left: 250px;
-        padding-right: 250px;
         text-align: left;
         -moz-hyphens: auto;
         -ms-hyphens: auto;
@@ -29,11 +27,13 @@
     }
 
     .logo {
-        position: fixed;
-        max-width: 20%;
-        max-height: 20%;
-        transform: translateX(-25%);
+        position: absolute;
+        max-width: 15vh;
+        max-height: 15vh;
+        top: 0;
+        right: 0;
     }
+
     .clearfix:before,
     .clearfix:after {
         content: " "; /* 1 */
@@ -52,10 +52,11 @@
     }
 
     div.scroll {
-        width: 1500px; 
-        height: 600px; 
-        overflow-x: hidden; 
+        width: 100vh; 
+        height: 100vh; 
+        overflow-x: auto; 
         overflow-y: auto;
+        margin: 0 auto;
     }
 </style>
 {% endblock %}

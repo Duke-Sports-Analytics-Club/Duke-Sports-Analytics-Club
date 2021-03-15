@@ -14,15 +14,27 @@
     .w3-bar-block .w3-bar-item {
         padding: 20px
     }
+    
     .logo {
-        position: fixed;
-        max-width: 20%;
-        max-height: 20%;
-        transform: translateX(-25%);
+        position: absolute;
+        max-width: 15vh;
+        max-height: 15vh;
+        top: 0;
+        right: 0;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vh;
+    }
+
+    .logo-container {
+        position: relative;
     }
 </style>
 {% endblock %}
 
+<div class="container">
 <body>
 
     <!-- Sidebar (hidden by default) -->
@@ -40,7 +52,7 @@
         <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
             <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
             <a href="{{ url_for('home') }}">
-                <div class="w3-right w3-padding-16">
+                <div class="logo-container">
                     <img class="logo" src="{{ url_for('static', filename='logo.jpg') }}"
                     alt="club logo"></div>
             </a>
@@ -62,4 +74,5 @@
 {% endblock %}
 
 </body>
+</div>
 </html>
