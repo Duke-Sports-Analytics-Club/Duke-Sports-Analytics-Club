@@ -4,38 +4,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 {% block style %}
-<style>
-    body,h1,h2,h3,h4,h5,h6 {
-        text-align: center;
-        font-family: "Karma", sans-serif
-    }
-
-    .w3-bar-block .w3-bar-item {
-        padding: 20px
-    }
-    
-    .logo {
-        position: absolute;
-        max-width: 15vh;
-        max-height: 15vh;
-        top: 0;
-        right: 0;
-    }
-
-    .container {
-        height: 100vh;
-        width: 100vh;
-    }
-
-    .logo-container {
-        position: relative;
-    }
-</style>
 {% endblock %}
 
-<div class="container">
 <body>
+<div class="container">
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
 
     <!-- Sidebar (hidden by default) -->
     <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left"
@@ -59,20 +44,34 @@
             <div class="w3-center w3-padding-16">{% block header %}{% block title %}{% endblock %}{% endblock %}</div>
     </div>
 
-    <script>
-        // Script to open and close sidebar
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-        }
-
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-        }
-    </script>
-
 {% block content %}
 {% endblock %}
 
-</body>
 </div>
+
+<footer id="footer">
+    <div class="row">
+        <div class="column">
+            <p class="footer-p">Connect</p>
+        </div>
+        <div class="column">
+            <a href="https://twitter.com/DukeSportsAC" class="fa fa-twitter"></a>
+        </div>
+        <div class="column">
+            <a href="https://www.facebook.com/DukeSportsAnalytics" class="fa fa-facebook"></a>
+        </div>
+        <div class="column">
+            <a href="https://www.instagram.com/dukesportsanalytics/" class="fa fa-instagram"></a>
+        </div>
+        <div class="column">
+            <a href="https://github.com/Duke-Sports-Analytics-Club" class="fa fa-github"></a>
+        </div>
+        <div class="column">
+            <a href="mailto: bluedevilanalytics@gmail.com" class="fa fa-envelope"></a>
+        </div>
+    </div>
+    <p class="footer-p">Website Last Updated: March 2021</p>
+</footer>
+
+</body>
 </html>
