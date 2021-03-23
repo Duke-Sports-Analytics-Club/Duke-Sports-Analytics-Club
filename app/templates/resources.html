@@ -15,6 +15,17 @@
         color: #fbfcfc;
     }
 
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: left;
+        font-family: "Karma", sans-serif;
+        background-color: #2e6387;
+        color: #fbfcfc;
+    }
+
     .logo {
         position: absolute;
         max-width: 15%;
@@ -76,6 +87,7 @@
         overflow-x: auto; 
         overflow-y: auto;
         margin: 0 auto;
+        text-align: left;
     }
 
     p {
@@ -153,6 +165,188 @@ Resources
 
 {% block content %}
 <div class="scroll">
-    <p>Coming soon!</p>
+
+    <h4><b>Conferences</b></h4>
+    <ul>
+        <a href="https://www.sloansportsconference.com">
+            <li>MIT Sloan Sports Analytics Conference</li></a>
+        <ul>
+            <li>April 8-9, 2021</li>
+        </ul>
+
+        <a href="http://www.nessis.org">
+            <li>New England Symposium on Statistics in Sports</li>
+        </a>
+        <ul>
+            <li>October 2, 2021</li>
+        </ul>
+
+        <a href="https://www.basketballanalyticssummit.com">
+            <li>Basketball Analytics Summit</li>
+        </a>
+        <ul>
+            <li>April 16, 2021</li>
+        </ul>
+
+        <a href="https://waset.org/machine-learning-and-data-mining-for-sports-analytics-conference-in-june-2021-in-london">
+            <li>International Conference on Machine Learning and Data Mining for Sports Analytics</li>
+        </a>
+        <ul>
+            <li>June 28-29, 2021</li>
+        </ul>
+
+        <a href="http://www.stat.cmu.edu/cmsac/">
+            <li>Carnegie Mellon Sports Analytics Conference</li>
+        </a>
+        <ul>
+            <li>Dates TBD</li>
+        </ul>
+    </ul>
+
+    <h4><b>Databases</b></h4>
+    <ul>
+        <a href="https://www.kaggle.com">
+            <li>Kaggle</li>
+        </a>
+        <ul>
+            <li>Kaggle is a tremendous resource for collected datasets and competitions in a variety of sports competitions</li>
+        </ul>
+    
+        <a href="https://rbsdm.com">
+            <li>RBSDM</li>
+        </a>
+        <ul>
+            <li>Football statistics page run by Ben Baldwin</li>
+            <li>Has many useful datasets as well as beginner nflfastR tutorials</li>
+        </ul>
+    
+        <a href="https://www.nflfastr.com">
+            <li>nflfastR</li>
+        </a>
+        <ul>
+            <li>Website for R package, nflfastR, which has many useful functions and datasets for analyzing the NFL</li>
+        </ul>
+    
+        <a href="https://gist.github.com/spfleming/2527a6ca2b940af2a8aa1fee9320171d">
+            <li>cfbscrapR</li>
+        </a>
+        <ul>
+            <li>Github for R package, cfbscrapR, which helps analysis of college football data</li>
+        </ul>
+    
+        <a href="https://www.rdocumentation.org/packages/nbastatR/versions/0.1.10131">
+            <li>nbastatR</li>
+        </a>
+        <ul>
+            <li>Website for R package, nbastatR, which assists in scraping data and generating analysis for NBA</li>
+        </ul>
+
+        <a href="https://github.com/BillPetti/baseballr">
+            <li>baseballR</li>
+        </a>
+        <ul>
+            <li>Github for R package, baseballR, that assists in analyzing MLB analytics</li>
+        </ul>
+
+        <a href="https://kenpom.com">
+            <li>Kenpom</li>
+        </a>
+        <ul>
+            <li>(Awesome) College MBB analytics website run by Ken Pomeroy</li>
+            <li>Team specific data requires a paid subscription</li>
+        </ul>
+
+        <a href="https://github.com/saiemgilani/kenpomR">
+            <li>KenpomR</li>
+        </a>
+        <ul>
+            <li>R package to scrape Kenpom (team specific data requires subscription)</li>
+        </ul>
+
+        <a href="https://www.pff.com">
+            <li>PFF</li>
+        </a>
+        <ul>
+            <li>Cutting edge NFL and CFB analytics website run by Cris Collinsworth</li>
+            <li>Most data behind paywall</li>
+            <li>Lots of pretty incredible articles and analysis</li>
+        </ul>
+
+        <a href="https://www.basketball-reference.com">
+            <li>Basketball Reference</li>
+        </a>
+        <ul>
+            <li>Most comprehensive data source for NBA</li>
+        </ul>
+
+        <a href="https://www.sports-reference.com/cbb/">
+            <li>Sports Reference</li>
+        </a>
+        <ul>
+            <li>Most comprehensive data source for MBB</li>
+        </ul>
+
+        <a href="https://www.pro-football-reference.com">
+            <li>Football Reference</li>
+        </a>
+        <ul>
+            <li>Most comprehensive data source for NFL</li>
+        </ul>
+
+        <a href="https://fbref.com/en/">
+            <li>FB Reference</li>
+        </a>
+        <ul>
+            <li>Most comprehensive data source for professional Soccer</li>
+        </ul>
+
+        <a href="https://www.sports-reference.com/cfb/">
+            <li>CFB Reference</li>
+        </a>
+        <ul>
+            <li>Most comprehensive data source for college football</li>
+        </ul>
+
+        <a href="https://www.baseball-reference.com">
+            <li>MLB Reference</li>
+        </a>
+        <ul>
+            <li>Most comprehensive data source for MLB</li>
+        </ul>
+
+        <a href="http://Hockey-Reference.com">
+            <li>Hockey Reference</li>
+        </a>
+        <ul>
+            <li>Most comprehensive data source for NHL</li>
+        </ul>
+
+        <a href="https://community.amstat.org/sis/sportsdataresources">
+            <li>Sports Data Resources</li>
+        </a>
+        <ul>
+            <li>General list of databases for a variety of sports</li>
+        </ul>
+    </ul>
+
+    <h4><b>Learning</b></h4>
+    <ul>
+        <a href="https://techgraphs.fangraphs.com/how-to-use-r-for-sports-stats-part-1-the-absolute-basics/">
+            <li>How to Use R for Sports</li>
+        </a>
+        <ul>
+            <li>Provides incredibly basic walkthrough of how to use R to load, clean, and run analysis of sports data</li>
+        </ul>
+    
+        <a href="https://github.com/JackLich10/JackLich10/blob/main/syracuse_football_analytics_blitz/Syracuse%20Football%20Analtyics.pdf">
+            <li>Syracuse Analytics Blitz</li>
+        </a>
+        <ul>
+            <li>Github of project finished by Jack Lichtenstein, Ben Thorpe, and Bryce Grove for Syracuse Analytics Blitz in February
+            2021, with the goal of estimating optimal run/pass ratios by field position in the NFL. Excellent example of stunning
+            dataviz, as well as what it looks like to work a project through to completion.</li>
+        </ul>
+    </ul>
+
 </div>
 {% endblock %}
