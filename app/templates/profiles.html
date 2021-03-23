@@ -11,37 +11,16 @@
     h6 {
         text-align: center;
         font-family: "Karma", sans-serif;
-    }
-
-    p {
-        text-align: left;
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
-        overflow-wrap: break-word;
-    }
-
-    .footer-p {
-        text-align: center;
-    }
-
-    .w3-bar-block .w3-bar-item {
-        padding: 20px;
-        
+        background-color: #2e6387;
+        color: #fbfcfc;
     }
 
     .logo {
         position: absolute;
-        max-width: 15vh;
-        max-height: 15vh;
+        max-width: 15%;
+        max-height: 15%;
         top: 0;
         right: 0;
-    }
-
-    .container {
-        min-height: calc(100vh - 92px);
-        width: 100vh;
     }
 
     #footer {
@@ -54,21 +33,41 @@
         background-color: #C0C0C0;
     }
 
-    .clearfix:before,
-    .clearfix:after {
-        content: " "; /* 1 */
-        display: table; /* 2 */
+    .footer-p {
+        text-align: center;
+        color: black;
     }
 
-    .clearfix:after {
-        clear: both;
+    /* Style the sidebar - fixed full height */
+    .sidebar {
+        width: 15%;
+        height: calc(100% - 92px);
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #2e6387;
+        overflow-x: hidden;
+        padding-top: 10px;
     }
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-    .clearfix {
-        *zoom: 1;
+
+    /* Style sidebar links */
+    .sidebar a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #fbfcfc;
+        display: block;
+    }
+
+    /* Style links on mouse-over */
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+    /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+    @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
     }
 
     div.scroll {
@@ -77,6 +76,25 @@
         overflow-x: auto; 
         overflow-y: auto;
         margin: 0 auto;
+    }
+
+    p {
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+        overflow-wrap: break-word;
+        text-align: left;
+        color: #fbfcfc
+    }
+
+    #footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;          /* Footer height */
+        background-color: #f7f7f7;
     }
 
     .row {
@@ -153,11 +171,11 @@ Profiles
 <div class="clearfix float-my-children">
     <img src="{{ url_for('static', filename='Piper_Hampsch.jpg') }}" width=200>
     <div>VP of Communications: Piper Hampsch</div>
-    <p>I am a second-year student-athlete pursuing a degree in Statistics with minors in Computer Science and Philosophy. I
-    compete on the Field Hockey Team for the Blue Devils as a goalkeeper, and I am my team’s representative on the
-    Student-Athlete Advisory Committee. When I’m not on the hockey pitch, I love watching and analyzing other sports, namely
-    basketball, ice hockey, and football. I hail from Massachusetts, but oddly enough I’m not a New England Sports fan!
-    Instead I root for an eclectic group of pro teams, but in the NCAA I am loyal to Duke of course!</p>
+    <p>Piper is a second-year student-athlete pursuing a degree in Statistics with minors in Computer Science and Philosophy. She
+    competes on the Field Hockey Team for the Blue Devils as a goalkeeper and is her team’s representative on the
+    Student-Athlete Advisory Committee. When Piper is not on the hockey pitch, she loves watching and analyzing other sports, namely
+    basketball, ice hockey, and football. Piper hails from Massachusetts, but oddly enough she is not a New England Sports fan!
+    Instead Piper roots for an eclectic group of pro teams, but in the NCAA she is loyal to Duke of course!</p>
 </div>
 
 <div class="clearfix float-my-children">
@@ -197,11 +215,19 @@ Profiles
 <div class="clearfix float-my-children">
     <img src="{{ url_for('static', filename='Brian_Janger.jpg') }}" width=200>
     <div>VP of Analytics: Brian Janger</div>
-    <p>I’m from Houston, Texas and I’m a freshman here at Duke. I intend to complete the interdepartmental major track in
-    Computer Science and Statistics and minor in either Physics or Spanish. I have been an avid sports fan since I was just
-    a kid, and I specialize in projects surrounding the sports I’ve played or watched the most – basketball, football, and
-    golf. I believe that there’s a lot of potential for analytics in the sports world and I’m very excited to work on
+    <p>Brian is from Houston, Texas and is a freshman here at Duke. He intends to complete the interdepartmental major track in
+    Computer Science and Statistics and minor in either Physics or Spanish. Brian has been an avid sports fan since he was just
+    a kid and specializes in projects surrounding the sports he's played or watched the most – basketball, football, and
+    golf. Brian believes that there’s a lot of potential for analytics in the sports world and is very excited to work on
     various projects and find new developments in the sports world!</p>
+</div>
+
+<div class="clearfix float-my-children">
+    <img src="{{ url_for('static', filename='Hillary_Lee.jpg') }}" width=200>
+    <div>VP of Analytics: Hillary Lee</div>
+    <p>Hillary is a freshman from Incheon, South Korea studying Economics and Statistics. She is a huge volleyball fan and
+    follows both men's and women's professional volleyball for leagues all over the world including the NCAA. Outside of DSAC,
+    she can be found cooking and catching up on recent Oscars-nominated films.</p>
 </div>
 
 <div class="clearfix float-my-children">

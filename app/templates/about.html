@@ -9,25 +9,18 @@
     h4,
     h5,
     h6 {
-        text-align: left;
-        font-family: "Karma", sans-serif
-    }
-
-    .w3-bar-block .w3-bar-item {
-        padding: 20px
+        text-align: center;
+        font-family: "Karma", sans-serif;
+        background-color: #2e6387;
+        color: #fbfcfc;
     }
 
     .logo {
         position: absolute;
-        max-width: 15vh;
-        max-height: 15vh;
+        max-width: 15%;
+        max-height: 15%;
         top: 0;
         right: 0;
-    }
-
-    .container {
-        min-height: calc(100vh - 92px);
-        width: 100vh;
     }
 
     #footer {
@@ -40,11 +33,49 @@
         background-color: #C0C0C0;
     }
 
-    .content {
-        float: left;
-        left: 20%;
-        position: absolute;
-        width: 65%;
+    .footer-p {
+        text-align: center;
+        color: black;
+    }
+
+    /* Style the sidebar - fixed full height */
+    .sidebar {
+        width: 15%;
+        height: calc(100% - 92px);
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #2e6387;
+        overflow-x: hidden;
+        padding-top: 10px;
+    }
+
+    /* Style sidebar links */
+    .sidebar a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #fbfcfc;
+        display: block;
+    }
+
+    /* Style links on mouse-over */
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+    /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+    @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+    }
+
+    div.scroll {
+        width: 70%; 
+        height: 77vh; 
+        overflow-x: auto; 
+        overflow-y: auto;
+        margin: 0 auto;
     }
 
     p {
@@ -53,6 +84,8 @@
         -webkit-hyphens: auto;
         hyphens: auto;
         overflow-wrap: break-word;
+        text-align: left;
+        color: #fbfcfc
     }
 
     #footer {
@@ -61,7 +94,7 @@
         bottom: 0;
         width: 100%;
         text-align: center;          /* Footer height */
-        background-color: #C0C0C0;
+        background-color: #f7f7f7;
     }
 
     .row {
@@ -112,13 +145,13 @@
     }
 </style>
 {% endblock %}
-
 {% block title %}
 About
 {% endblock %}
 
 {% block content %}
-<div class="content">
+<div class="scroll">
+
     <p>Our mission is to foster a community in which anyone can get involved and apply their interest in sports analytics in
     any capacity possible. Duke Sports Analytics Club will primarily be a platform in which people can do projects diving
     into a sport or problem of their choice. Afterward, they could publish that research project in an article which would
@@ -126,5 +159,87 @@ About
     members who are interested in working with the athletic department to help our school. Furthermore, we will be creating
     many opportunities for members to participate in sports analytics competitions, attend conferences, and get involved
     with research in the field.</p>
+
+    <h2>Frequently Asked Questions:</h2>
+
+    <a href="https://docs.google.com/document/d/1Oa5cxBvz5MmVaV4VZh8u7z3OFfnAEBA_7hFIIqAMWPo/edit?usp=sharing">
+        <h5>Full document</h5>
+    </a>
+
+    <h4><b>What is Duke Sports Analytics Club?</b></h4>
+
+    <p>Duke Sports Analytics Club will primarily be a platform in which people can do projects diving into a sport or problem
+    of their choice. Afterward, they could publish that research project in an article which would be posted on our public
+    facing website. We are also hoping to partner with Duke Athletics, allowing for dedicated members who are interested in
+    working with the athletic department to help our school. Furthermore, we will be creating many opportunities for members
+    to participate in sports analytics competitions, attend conferences, and get involved with research in the field. Our
+    mission is to foster a community in which anyone can get involved and apply their interest in sports analytics in any
+    capacity possible.</p>
+
+    <p>We will be having general board meetings at least once per month, which will cover important updates and announcements
+    on club activities, have a member present a project that they've been working on, and teach technical skills to complete
+    projects. We also hope to bring in guest speakers on a monthly basis who work in the industry. Sports Analytics will
+    also have social events where members are able to get to know each other such as a basketball tournament or a watch
+    party for games (once COVID gets better).</p>
+
+    <p>Our goal is to make sure members can get involved and apply their interest in sports analytics in any way possible.</p>
+
+    <h4><b>When are meetings?</b></h4>
+
+    <p>General Body Meetings are held online via Zoom on the last Tuesday of each month at 8:00 PM EST. This may be changed at
+    discretion of the club President and will notify using listserv if changed. We will be sending out email reminders so
+    just keep checking for emails from us!</p>
+
+    <h4><b>How can I get involved?</b></h4>
+
+    <p>Fill out this <a href="https://forms.gle/nskXF38NcSgS5V6p8">form</a> to get added to our listserv email</p>
+
+    <p>To join a project team or have an idea for a project - contact Ben Thorpe (<a href="mailto: ben.thorpe@duke.edu">ben.thorpe@duke.edu</a>)</p>
+
+    <h4><b>I don’t have much statistics or analysis experience - where can I get started?</b></h4>
+
+    <p>Check out this tutorial <a href="{{ url_for('tutorial_post') }}">post</a> by Jack Lichtenstein using R to explore NCAA basketball data</p>
+
+    <p>You can also find other learning resources on the bottom of our resources <a href="https://docs.google.com/document/d/1DenAbY9BNojOs9XWeStbnnmkT81H4g_a-QxW8SUx-cc/edit?usp=sharing">doc</a></p>
+
+    <h4><b>Where can I find more information on DSAC?</b></h4>
+
+    <p>You can find more information on our <a href="{{ url_for('home') }}">website</a></p>
+
+    <p>Also, don’t forget to stay connected on our social media! <a href="https://www.instagram.com/dukesportsanalytics/">Instagram</a> | <a href="https://www.facebook.com/DukeSportsAnalytics/?ref=page_internal">Facebook</a> | <a href="https://twitter.com/DukeSportsAC">Twitter</a></p>
+
+    <h4><b>What is the purpose of having a Sports Analytics Club?</b></h4>
+
+    <p>The purpose of Duke Sports Analytics Club is primarily to foster a community in which students can learn and apply their
+    interest in sports analytics. The club will serve as a platform for analytics projects that tackle a variety of complex
+    topics across many different sports. Through a team based workflow system, members can join a project team that relates
+    to their sports interest or create a project of their own. Each project can be done through multiple mediums such as
+    traditional article write ups, presentational slide decks, interactive web applications, etc. Our goal in these projects
+    is also to provide valuable experience for professional opportunities. Members would be able to cite these projects as a
+    demonstration of their technical abilities. Furthermore, the presentation of the project would showcase the student’s
+    communication ability because of the necessary skill to translate numerical findings into insightful commentary.</p>
+
+    <p>Another core component of the purpose is to provide opportunities for students to go into the sports analytics industry.
+    Currently there is not much information through the career center or other resources at Duke to explore this niche
+    field. Given the current demand for data analysis in basketball, baseball, football, and other sports, the growth of
+    this industry is guaranteed and we want Duke students to be prepared for it. This club would search and invite
+    professionals who work in the field to speak about their experiences at club meetings. We hope to build a pipeline into
+    sports analytics internships at various companies and gain recognition across the country. Then from there, we hope to
+    extend our alumni network so students can get mentorship and recruitment advice from them.</p>
+    
+    <h4><b>How does Duke Sports Analytics Club fulfill a campus need and contribute to the Duke community in a unique way? How does
+    your group differ from other similar groups on campus?</b></h4>
+
+    <p>Our school is known for both academics and athletics. We take pride in both our elite education and our success on the
+    Division I level. There are so many Cameron Crazies that are thinking about why Duke basketball has achieved the
+    impressive levels of success and the analytics behind it. Right now, have some individuals working with Duke Athletics
+    in specific teams but not a formal organization cohesively. Currently at Duke, there is no current community of
+    statistic loving sports fans who want to dive deeper into analytics. This club would fill all those gaps. It would also
+    differentiate itself from other campus groups. The closest similar group is the Sports Management Club. This club has a
+    different focus in sports - concentrating toward the business side of the industry. Unlike Duke Sports Analytics Club,
+    they do not cover in depth analysis or do projects. The only common function of the clubs is bringing guest speakers.
+    Even then, our guest speakers would specifically be working in analytics and provide more of a technical approach to
+    their lectures.</p>
+
 </div>
 {% endblock %}
