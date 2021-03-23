@@ -2,17 +2,73 @@
 
 {% block style %}
 <style>
-    body,
+    body {
+        background-image: url("static/homeBackground.jpg");
+        background-size: cover;
+    }
     h1,
     h2,
     h3,
     h4,
-    h5,
+    h5 {
+        position: fixed;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 290px;
+        margin-left: 75px;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+        padding: 5px;
+        font-family: "Karma", sans-serif;
+        font-weight: bolder;
+        font-size: 50px;
+        color: white;
+    }
     h6 {
         text-align: center;
         font-family: "Karma", sans-serif;
-        background-color: #2e6387;
-        color: #fbfcfc;
+        color: white;
+        font-size: 30px;
+    }
+    a.one:link, a.one:visited {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border-radius: 6px;
+        font-family: "Karma", sans-serif;
+        font-weight: bolder;
+        text-align: center;
+        vertical-align: middle;
+        margin-left: 425px;
+        margin-top: 530px;
+        padding: 10px;
+        text-decoration: none;
+        display: inline-block;
+    }
+    a.one:hover, a.one:active {
+        background: rgba(255, 255, 255, 0.90);
+        color: black;
+    }
+
+    a.two:link, a.two:visited {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border-radius: 6px;
+        font-family: "Karma", sans-serif;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 20px;
+        vertical-align: middle;
+        margin-left: 435px;
+        margin-top: 400px;
+        padding: 10px;
+        text-decoration: none;
+        display: inline-block;
+    }
+    a.two:hover, a.two:active {
+        background: rgba(255, 255, 255, 0.90);
+        color: black;
     }
 
     .logo {
@@ -46,7 +102,8 @@
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: #2e6387;
+        background-color: rgba(0, 0, 0, 0.25);
+        /* background-color: #2e6387; */
         overflow-x: hidden;
         padding-top: 10px;
     }
@@ -147,16 +204,15 @@
 {% endblock %}
 
 {% block title %}
-Duke Sports Analytics Club
+<!-- Duke Sports Analytics Club -->
 {% endblock %}
 
 {% block content %}
 <div class="scroll">
-    <a href="{{ url_for('about') }}">
-        <h5>Learn More</h5>
-    </a>
-    <a href="https://forms.gle/nskXF38NcSgS5V6p8">
-        <h5>Join our mailing list</h5>
-    </a>
+    <h5>Welcome to Duke Sports Analytics Club!</h5>
+
+    <a class="two" href="https://duke-sports-analytics-club.herokuapp.com/about">Learn More</a>
+
+    <a class="one" href="https://forms.gle/nskXF38NcSgS5V6p8">Click here to join!</a>
 </div>
 {% endblock %}
