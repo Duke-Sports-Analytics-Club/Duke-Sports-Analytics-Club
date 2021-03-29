@@ -21,8 +21,9 @@
         text-decoration: underline;
     }
 
-    img {
+    .post_pic {
         float: left;
+        padding: 1%;
     }
 
     .logo {
@@ -80,15 +81,19 @@
         .sidebar a {font-size: 18px;}
     }
 
+    div.container {
+        height: 77vh;
+    }
+
     div.scroll {
         width: 70%; 
-        height: 77vh; 
         overflow-x: auto; 
         overflow-y: auto;
         margin: 0 auto;
     }
 
     p {
+        text-align: left;
         -moz-hyphens: auto;
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
@@ -162,11 +167,19 @@ Projects
 
 {% block content %}
 
-<div class="scroll">
-    <h6><a href="{{ url_for('tutorial_post') }}">Tutorial Post</a></h6>
-    <a href="{{ url_for('tutorial_post') }}">
-        <img class="middle" src="static/tutorialProject.jpg" width="150" height="150">
-     </a>
-     The goal of this post is to familiarize R programming beginners with some public sports data sources. Specifically, we will look at scraping sports-reference.com ’s college basketball data and then making some visualizations. Let’s get started!
+<div class="container">
+    <div class="scroll">
+        <div>
+            <a href="{{ url_for('tutorial_post') }}">
+                <img class="post_pic" src="static/tutorialProject.jpg" width="150" height="150">
+            </a>
+        </div>
+        <div style='margin-left:60px;'>
+            <h6><a href="{{ url_for('tutorial_post') }}">Tutorial Post</a></h6>
+            <p>The goal of this post is to familiarize R programming beginners with some public sports data sources.
+                Specifically, we will look at scraping sports-reference.com ’s college basketball data and then making some
+                visualizations. Let’s get started!</p>
+        </div>
+    </div>
 </div>
 {% endblock %}
