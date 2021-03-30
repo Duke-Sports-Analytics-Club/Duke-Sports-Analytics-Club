@@ -26,6 +26,10 @@
         padding: 1%;
     }
 
+    .post_text {
+        text-align: left;
+    }
+
     .logo {
         position: absolute;
         max-width: 15%;
@@ -176,7 +180,7 @@ Projects
         </div>
         <div style='margin-left:60px;'>
             <h6><a href="{{ url_for('tutorial_post') }}">Tutorial Post</a></h6>
-            <p>The goal of this post is to familiarize R programming beginners with some public sports data sources.
+            <p class="post_text">The goal of this post is to familiarize R programming beginners with some public sports data sources.
                 Specifically, we will look at scraping sports-reference.com ’s college basketball data and then making some
                 visualizations. Let’s get started!</p>
         </div>
