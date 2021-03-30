@@ -18,7 +18,7 @@
         position: fixed;
         text-align: center;
         vertical-align: middle;
-        margin-top: 18%;
+        margin-top: 37vh;
         margin-left: 5%;
         background: rgba(0, 0, 0, 0.4);
         border-radius: 5px;
@@ -44,7 +44,7 @@
         text-align: center;
         vertical-align: middle;
         margin-left: 29%;
-        margin-top: 530px;
+        margin-top: 80vh;
         padding: 10px;
         text-decoration: none;
         display: inline-block;
@@ -65,7 +65,7 @@
         font-size: 20px;
         vertical-align: middle;
         margin-left: 30%;
-        margin-top: 400px;
+        margin-top: 65vh;
         padding: 10px;
         text-decoration: none;
         display: inline-block;
@@ -214,9 +214,13 @@
 
 {% block content %}
 <div class="scroll">
-    <h5>Welcome to Duke Sports Analytics Club!</h5>
+    <div>
+        <h5>Welcome to Duke Sports Analytics Club!</h5>
+    </div>
 
-    <a class="two" href="{{ url_for('about') }}">Learn More</a>
+    <div>
+        <a class="two" href="{{ url_for('about') }}">Learn More</a>
+    </div>
 
     <a class="one" href="https://forms.gle/nskXF38NcSgS5V6p8">Click here to join!</a>
 </div>
