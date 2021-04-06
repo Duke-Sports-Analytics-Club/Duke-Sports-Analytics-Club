@@ -3,12 +3,20 @@
 {% block style %}
 <style>
     html {
+        height: 100%;
         font-size: 100%;
     }
 
     body {
+        height: 100%;
+    }
+    .bi {
         background-image: url("static/homeBackground.jpg");
-        background-size: 100% 113%;
+        width: 100%;
+        height: calc(100% - 100px);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     h1,
     h2,
@@ -85,7 +93,7 @@
 
     #footer {
         position: fixed;
-        height: 92px;
+        height: 100px;
         left: 0;
         bottom: 0;
         width: 100%;
@@ -102,7 +110,7 @@
     /* Style the sidebar - fixed full height */
     .sidebar {
         width: 15%;
-        height: calc(100% - 92px);
+        height: calc(100% - 100px);
         position: fixed;
         z-index: 1;
         top: 0;
@@ -155,6 +163,7 @@
         left: 0;
         bottom: 0;
         width: 100%;
+        height: 100px;
         text-align: center;          /* Footer height */
         background-color: #f7f7f7;
     }
@@ -213,15 +222,17 @@
 {% endblock %}
 
 {% block content %}
-<div class="scroll">
-    <div>
-        <h5>Welcome to Duke Sports Analytics Club!</h5>
+<div class="bi">
+    <div class="scroll">
+        <div>
+            <h5>Welcome to Duke Sports Analytics Club!</h5>
+        </div>
+    
+        <div>
+            <a class="two" href="{{ url_for('about') }}">Learn More</a>
+        </div>
+    
+        <a class="one" href="https://forms.gle/nskXF38NcSgS5V6p8">Click here to join!</a>
     </div>
-
-    <div>
-        <a class="two" href="{{ url_for('about') }}">Learn More</a>
-    </div>
-
-    <a class="one" href="https://forms.gle/nskXF38NcSgS5V6p8">Click here to join!</a>
 </div>
 {% endblock %}
