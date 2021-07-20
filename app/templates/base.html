@@ -2,6 +2,7 @@
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,7 +15,7 @@
     <h1>{% block header %}{% block title %}{% endblock %}{% endblock %}</h1>
     
     <a href="{{ url_for('home') }}">
-        <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="club logo">
+        <img class="logo" src="{{ url_for('static', filename='logo_transparent.png') }}" alt="club logo">
     </a>
 
     <!-- The sidebar -->
@@ -50,7 +51,7 @@
             <a href="mailto: bluedevilanalytics@gmail.com" class="fa fa-envelope"></a>
         </div>
     </div>
-    <p class="footer-p">Website Last Updated: March 2021</p>
+    <p class="footer-p">Website Last Updated: July 2021</p>
 </footer>
 
 </body>
