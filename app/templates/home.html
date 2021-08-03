@@ -30,11 +30,12 @@
         margin-left: 5%;
         background: rgba(0, 0, 0, 0.4);
         border-radius: 5px;
-        padding: 5px;
         font-family: "Karma", sans-serif;
         font-weight: bolder;
-        font-size: 50px;
+        font-size: 48px;
         color: white;
+        padding-left: 125px;
+        padding-right: 0px;
     }
     h6 {
         text-align: center;
@@ -51,11 +52,11 @@
         font-weight: bolder;
         text-align: center;
         vertical-align: middle;
-        margin-left: 29.5%;
+        margin-left: 40%;
         margin-top: 70vh;
-        padding: 10px;
         text-decoration: none;
         display: inline-block;
+        padding: 10px;
     }
     a.one:hover, a.one:active {
         background: rgba(255, 255, 255, 0.90);
@@ -72,11 +73,11 @@
         text-align: center;
         font-size: 20px;
         vertical-align: middle;
-        margin-left: 30%;
+        margin-left: 41%;
         margin-top: 55vh;
-        padding: 10px;
         text-decoration: none;
         display: inline-block;
+        padding: 10px;
     }
     a.two:hover, a.two:active {
         background: rgba(255, 255, 255, 0.90);
@@ -146,6 +147,12 @@
         overflow-x: auto; 
         overflow-y: auto;
         margin: 0 auto;
+    }
+
+    .right-sidebar {
+        float: right;
+        padding-top: 310px;
+        padding-bottom: 0px;
     }
 
     p {
@@ -223,6 +230,11 @@
 
 {% block content %}
 <div class="bi">
+    <div class="right-sidebar">
+        <a class="twitter-timeline" data-width="320" data-height="320" data-theme="dark"
+            href="https://twitter.com/DukeSportsAC?ref_src=twsrc%5Etfw">Tweets by DukeSportsAC</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
     <div class="scroll">
         <div>
             <h5>Welcome to Duke Sports Analytics Club!</h5>
