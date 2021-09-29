@@ -2,21 +2,65 @@
 
 {% block style %}
 <style>
-    html {
-        height: 100%;
-        font-size: 100%;
+    .crossfade > figure {
+        animation: imageAnimation 30s linear infinite 0s;
+        backface-visibility: hidden;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: transparent;
+        margin-top: 0vh;
+        margin-left: 0vw;
+        height: calc(100vh - 15vh);
+        opacity: 0;
+        position: absolute;
+        width: 100vw;
+        z-index: 0;
+    }
+    .crossfade > figure:nth-child(1) { background-image:
+        url("static/homeBackground.jpg"); }
+
+    .crossfade > figure:nth-child(2) {
+        animation-delay: 6s;
+        background-image: url('static/Football_Stadium.jpeg');
     }
 
-    body {
-        height: 100%;
+    .crossfade > figure:nth-child(3) {
+        animation-delay: 12s;
+        background-image: url('static/Soccer_Stadium.jpeg');
     }
-    .bi {
-        background-image: url("static/homeBackground.jpg");
-        width: 100%;
-        height: calc(100% - 100px);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+
+    .crossfade > figure:nth-child(4) {
+        animation-delay: 18s;
+        background-image: url('static/Baseball_Stadium.jpg');
+    }
+
+    .crossfade > figure:nth-child(5) {
+        animation-delay: 24s;
+        background-image: url('static/Lacrosse_Stadium.jpeg');
+    }
+    @keyframes 
+        imageAnimation {  0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    8% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    17% {
+        opacity: 1
+    }
+    25% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+    }
+    .homepage {
+        width: 100vw;
+        height: calc(100vh - 15vh);
     }
     h1,
     h2,
@@ -26,37 +70,29 @@
         position: fixed;
         text-align: center;
         vertical-align: middle;
-        margin-top: 37vh;
-        margin-left: 5%;
         background: rgba(0, 0, 0, 0.4);
-        border-radius: 5px;
         font-family: "Karma", sans-serif;
         font-weight: bolder;
-        font-size: 48px;
+        font-size: 7vmin;
         color: white;
-        padding-left: 125px;
-        padding-right: 0px;
-    }
-    h6 {
-        text-align: center;
-        font-family: "Karma", sans-serif;
-        color: white;
-        font-size: 30px;
+        margin-top: 2vh;
+        margin-left: 38vw;
     }
     a.one:link, a.one:visited {
         position: fixed;
         background: rgba(0, 0, 0, 0.5);
         color: white;
-        border-radius: 6px;
+        border-radius: 6vmin;
         font-family: "Karma", sans-serif;
         font-weight: bolder;
+        font-size: 3vmin;
         text-align: center;
         vertical-align: middle;
-        margin-left: 40%;
-        margin-top: 70vh;
+        margin-left: 43vw;
+        margin-top: 72vh;
         text-decoration: none;
         display: inline-block;
-        padding: 10px;
+        padding: 3vmin;
     }
     a.one:hover, a.one:active {
         background: rgba(255, 255, 255, 0.90);
@@ -67,17 +103,17 @@
         position: fixed;
         background: rgba(0, 0, 0, 0.5);
         color: white;
-        border-radius: 6px;
+        border-radius: 6vmin;
         font-family: "Karma", sans-serif;
         font-weight: bolder;
         text-align: center;
-        font-size: 20px;
+        font-size: 3vmin;
         vertical-align: middle;
-        margin-left: 41%;
-        margin-top: 55vh;
+        margin-left: 45vw;
+        margin-top: 49vh;
         text-decoration: none;
         display: inline-block;
-        padding: 10px;
+        padding: 3vmin;
     }
     a.two:hover, a.two:active {
         background: rgba(255, 255, 255, 0.90);
@@ -86,20 +122,19 @@
 
     .logo {
         position: absolute;
-        max-width: 15%;
-        max-height: 15%;
+        max-width: 15vw;
+        max-height: 15vh;
         top: 0;
         right: 0;
+        z-index: 1;
     }
 
     #footer {
         position: fixed;
-        height: 100px;
-        left: 0;
-        bottom: 0;
-        width: 100%;
+        width: 100vw;
+        height: 15vh;
         text-align: center;          /* Footer height */
-        background-color: #C0C0C0;
+        background-color: #f7f7f7;
     }
 
     .footer-p {
@@ -110,8 +145,8 @@
 
     /* Style the sidebar - fixed full height */
     .sidebar {
-        width: 15%;
-        height: calc(100% - 100px);
+        width: 10vw;
+        height: calc(100vh - 15vh);
         position: fixed;
         z-index: 1;
         top: 0;
@@ -119,13 +154,14 @@
         background-color: rgba(0, 0, 0, 0.25);
         /* background-color: #2e6387; */
         overflow-x: hidden;
-        padding-top: 10px;
+        padding-top: 2vh;
     }
 
     /* Style sidebar links */
     .sidebar a {
         text-decoration: none;
-        font-size: 20px;
+        font-size: 2vmin;
+        text-align: center;
         color: #fbfcfc;
         display: block;
     }
@@ -135,15 +171,8 @@
         color: #f1f1f1;
     }
 
-    /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
-    @media screen and (max-height: 450px) {
-        .sidebar {padding-top: 15px;}
-        .sidebar a {font-size: 18px;}
-    }
-
     div.scroll {
-        width: 70%; 
-        height: 77vh; 
+        height: calc(100vh - 15vh); 
         overflow-x: auto; 
         overflow-y: auto;
         margin: 0 auto;
@@ -151,8 +180,10 @@
 
     .right-sidebar {
         float: right;
-        padding-top: 310px;
-        padding-bottom: 0px;
+        position: relative;
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+        z-index: 1;
     }
 
     p {
@@ -165,29 +196,19 @@
         color: #fbfcfc
     }
 
-    #footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100px;
-        text-align: center;          /* Footer height */
-        background-color: #f7f7f7;
-    }
-
     .row {
         display: flex;
     }
 
     .column {
-        padding-top: 5px;
-        flex: 16.6667%;
+        padding-top: 2vh;
+        flex: 16.6667vw;
     }
 
     .fa {
-        padding: 5px;
-        font-size: 25px;
-        width: 65px;
+        padding: 1vh;
+        font-size: 3vmin;
+        width: 7vw;
         text-align: center;
         text-decoration: none;
     }
@@ -221,6 +242,12 @@
         background: black;
         color: white;
     }
+    @media screen and (max-width: 840px),
+           screen and (max-height: 390px) {
+        .right-sidebar {
+            display: none;
+        }
+    }
 </style>
 {% endblock %}
 
@@ -229,15 +256,22 @@
 {% endblock %}
 
 {% block content %}
-<div class="bi">
+<div class="crossfade">
+    <figure></figure>
+    <figure></figure>
+    <figure></figure>
+    <figure></figure>
+    <figure></figure>
+</div>
+<div class="homepage">
     <div class="right-sidebar">
-        <a class="twitter-timeline" data-width="320" data-height="320" data-theme="dark"
+        <a class="twitter-timeline" data-width="20vw" data-height="70vh" data-theme="dark"
             href="https://twitter.com/DukeSportsAC?ref_src=twsrc%5Etfw">Tweets by DukeSportsAC</a>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     <div class="scroll">
         <div>
-            <h5>Welcome to Duke Sports Analytics Club!</h5>
+            <h5>Welcome to <br> Duke Sports <br> Analytics Club!</h5>
         </div>
     
         <div>

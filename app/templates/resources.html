@@ -3,24 +3,27 @@
 {% block style %}
 <style>
     body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        text-align: center;
-        font-family: "Karma", sans-serif;
-        background-color: #2e6387;
-        color: #fbfcfc;
-    }
-
-    h2,
-    h3,
-    h4,
     h5,
     h6 {
         text-align: left;
+        font-family: "Karma", sans-serif;
+        background-color: #2e6387;
+        color: #fbfcfc;
+        padding-left: 12vw;
+    }
+
+    h4 {
+        text-align: left;
+        font-family: "Karma", sans-serif;
+        background-color: #2e6387;
+        color: #fbfcfc;
+        padding-left: 2vw;
+    }
+
+    h1,
+    h2,
+    h3 {
+        text-align: center;
         font-family: "Karma", sans-serif;
         background-color: #2e6387;
         color: #fbfcfc;
@@ -28,18 +31,16 @@
 
     .logo {
         position: absolute;
-        max-width: 15%;
-        max-height: 15%;
+        max-width: 15vw;
+        max-height: 15vh;
         top: 0;
         right: 0;
     }
 
     #footer {
         position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100px;
+        width: 100vw;
+        height: 15vh;
         text-align: center;          /* Footer height */
         background-color: #f7f7f7;
     }
@@ -51,21 +52,22 @@
 
     /* Style the sidebar - fixed full height */
     .sidebar {
-        width: 15%;
-        height: calc(100% - 100px);
+        width: 10vw;
+        height: calc(100vh - 15vh);
         position: fixed;
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: #2e6387;
+        background-color: rgba(0, 0, 0, 0.25);
         overflow-x: hidden;
-        padding-top: 10px;
+        padding-top: 2vh;
     }
 
     /* Style sidebar links */
     .sidebar a {
         text-decoration: none;
-        font-size: 20px;
+        font-size: 2vmin;
+        text-align: center;
         color: #fbfcfc;
         display: block;
     }
@@ -75,19 +77,11 @@
         color: #f1f1f1;
     }
 
-    /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
-    @media screen and (max-height: 450px) {
-        .sidebar {padding-top: 15px;}
-        .sidebar a {font-size: 18px;}
-    }
-
     div.scroll {
-        width: 70%; 
-        height: 73vh; 
+        height: calc(100vh - 25vh); 
         overflow-x: auto; 
         overflow-y: auto;
         margin: 0 auto;
-        text-align: left;
     }
 
     p {
@@ -115,14 +109,14 @@
     }
 
     .column {
-        padding-top: 5px;
-        flex: 16.6667%;
+        padding-top: 2vh;
+        flex: 16.6667vw;
     }
 
     .fa {
-        padding: 5px;
-        font-size: 25px;
-        width: 65px;
+        padding: 1vh;
+        font-size: 3vmin;
+        width: 7vw;
         text-align: center;
         text-decoration: none;
     }

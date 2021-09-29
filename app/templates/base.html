@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
@@ -20,11 +20,11 @@
 
     <!-- The sidebar -->
     <div class="sidebar">
-        <a href="{{ url_for('home') }}"><i class="fa fa-fw fa-home"></i> Home</a>
-        <a href="{{ url_for('about') }}"><i class="fa fa-fw fa-question"></i> About</a>
-        <a href="{{ url_for('profiles') }}"><i class="fa fa-fw fa-user"></i> Profiles</a>
-        <a href="{{ url_for('projects') }}"><i class="fa fa-bar-chart"></i> Projects</a>
-        <a href="{{ url_for('resources') }}"><i class="fa fa-book"></i> Resources</a>
+        <a href="{{ url_for('home') }}"><i class="fa fa-fw fa-home"></i><br>Home</a>
+        <a href="{{ url_for('about') }}"><i class="fa fa-fw fa-question"></i><br>About</a>
+        <a href="{{ url_for('profiles') }}"><i class="fa fa-fw fa-user"></i><br>Profiles</a>
+        <a href="{{ url_for('projects') }}"><i class="fa fa-bar-chart"></i><br>Projects</a>
+        <a href="{{ url_for('resources') }}"><i class="fa fa-book"></i><br>Resources</a>
     </div>
 
 {% block content %}
@@ -51,7 +51,7 @@
             <a href="mailto: bluedevilanalytics@gmail.com" class="fa fa-envelope"></a>
         </div>
     </div>
-    <p class="footer-p">Website Last Updated: August 2021</p>
+    <p class="footer-p">Website Last Updated: September 2021</p>
 </footer>
 
 </body>

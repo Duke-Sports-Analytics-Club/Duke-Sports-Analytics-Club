@@ -2,7 +2,6 @@
 
 {% block style %}
 <style>
-    body,
     h1,
     h2,
     h3,
@@ -15,20 +14,26 @@
         color: #fbfcfc;
     }
 
+    body {
+        text-align: left;
+        font-family: "Karma", sans-serif;
+        background-color: #2e6387;
+        color: #fbfcfc;
+        padding-left: 12vw;
+    }
+
     .logo {
         position: absolute;
-        max-width: 15%;
-        max-height: 15%;
+        max-width: 15vw;
+        max-height: 15vh;
         top: 0;
         right: 0;
     }
 
     #footer {
         position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100px;
+        width: 100vw;
+        height: 15vh;
         text-align: center;          /* Footer height */
         background-color: #f7f7f7;
     }
@@ -40,21 +45,22 @@
 
     /* Style the sidebar - fixed full height */
     .sidebar {
-        width: 15%;
-        height: calc(100% - 100px);
+        width: 10vw;
+        height: calc(100vh - 15vh);
         position: fixed;
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: #2e6387;
+        background-color: rgba(0, 0, 0, 0.25);
         overflow-x: hidden;
-        padding-top: 10px;
+        padding-top: 2vh;
     }
 
     /* Style sidebar links */
     .sidebar a {
         text-decoration: none;
-        font-size: 20px;
+        font-size: 2vmin;
+        text-align: center;
         color: #fbfcfc;
         display: block;
     }
@@ -64,15 +70,8 @@
         color: #f1f1f1;
     }
 
-    /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
-    @media screen and (max-height: 450px) {
-        .sidebar {padding-top: 15px;}
-        .sidebar a {font-size: 18px;}
-    }
-
     div.scroll {
-        width: 70%; 
-        height: 73vh; 
+        height: calc(100vh - 25vh); 
         overflow-x: auto; 
         overflow-y: auto;
         margin: 0 auto;
@@ -102,14 +101,14 @@
     }
 
     .column {
-        padding-top: 5px;
-        flex: 16.6667%;
+        padding-top: 2vh;
+        flex: 16.6667vw;
     }
 
     .fa {
-        padding: 5px;
-        font-size: 25px;
-        width: 65px;
+        padding: 1vh;
+        font-size: 3vmin;
+        width: 7vw;
         text-align: center;
         text-decoration: none;
     }
@@ -151,7 +150,7 @@ About
 
 {% block content %}
 <div class="scroll">
-
+    <br>
     <p>Our mission is to foster a community in which anyone can get involved and apply their interest in sports analytics in
     any capacity possible. Duke Sports Analytics Club will primarily be a platform in which people can do projects diving
     into a sport or problem of their choice. Afterward, they could publish that research project in an article which would
@@ -208,9 +207,7 @@ About
 
     <h4><b>Where can I find more information on DSAC?</b></h4>
 
-    <p>You can find more information on our <a href="{{ url_for('home') }}">website</a></p>
-
-    <p>Also, don’t forget to stay connected on our social media! <a href="https://www.instagram.com/dukesportsanalytics/">Instagram</a> | <a href="https://www.facebook.com/DukeSportsAnalytics/?ref=page_internal">Facebook</a> | <a href="https://twitter.com/DukeSportsAC">Twitter</a></p>
+    <p>Stay connected on our social media! <a href="https://www.instagram.com/dukesportsanalytics/">Instagram</a> | <a href="https://www.facebook.com/DukeSportsAnalytics/?ref=page_internal">Facebook</a> | <a href="https://twitter.com/DukeSportsAC">Twitter</a></p>
 
     <h4><b>What is the purpose of having a Sports Analytics Club?</b></h4>
 
