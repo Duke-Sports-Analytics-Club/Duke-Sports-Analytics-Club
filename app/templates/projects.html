@@ -50,21 +50,31 @@
 
     #footer {
         position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 10vh;
         width: 100vw;
-        height: 15vh;
-        text-align: center;          /* Footer height */
+        text-align: center;
         background-color: #f7f7f7;
     }
 
+    .last-updated {
+        position: fixed;
+        left: 40vw;
+        top: 95vh;
+    }
+
     .footer-p {
+        font-size: 2vmin;
         text-align: center;
         color: black;
+        font-family: "Karma", sans-serif;
     }
 
     /* Style the sidebar - fixed full height */
     .sidebar {
         width: 10vw;
-        height: calc(100vh - 15vh);
+        height: calc(100vh - 10vh);
         position: fixed;
         z-index: 1;
         top: 0;
@@ -89,11 +99,11 @@
     }
 
     div.container {
-        height: calc(100vh - 15vh);
+        height: calc(100vh - 10vh);
     }
 
     div.scroll {
-        height: calc(100vh - 15vh); 
+        height: calc(100vh - 10vh); 
         overflow-x: auto; 
         overflow-y: auto;
         margin: 0 auto;
@@ -110,27 +120,19 @@
         color: #fbfcfc
     }
 
-    #footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;          /* Footer height */
-        background-color: #f7f7f7;
-    }
-
     .row {
         display: flex;
     }
 
     .column {
-        padding-top: 2vh;
+        padding-top: 1vh;
         flex: 16.6667vw;
     }
 
     .fa {
-        padding: 1vh;
         font-size: 3vmin;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
         width: 7vw;
         text-align: center;
         text-decoration: none;
@@ -164,6 +166,16 @@
     .fa-envelope {
         background: black;
         color: white;
+    }
+
+    @media only screen and (max-device-width : 480px) {
+        #footer {
+            display: none;
+
+        }
+        .last-updated {
+            display: none;
+        }
     }
 </style>
 {% endblock %}

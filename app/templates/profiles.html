@@ -48,21 +48,31 @@
 
     #footer {
         position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 10vh;
         width: 100vw;
-        height: 15vh;
-        text-align: center;          /* Footer height */
+        text-align: center;
         background-color: #f7f7f7;
     }
 
+    .last-updated {
+        position: fixed;
+        left: 40vw;
+        top: 95vh;
+    }
+
     .footer-p {
+        font-size: 2vmin;
         text-align: center;
         color: black;
+        font-family: "Karma", sans-serif;
     }
 
     /* Style the sidebar - fixed full height */
     .sidebar {
         width: 10vw;
-        height: calc(100vh - 15vh);
+        height: calc(100vh - 10vh);
         position: fixed;
         z-index: 1;
         top: 0;
@@ -87,7 +97,7 @@
     }
 
     div.scroll {
-        height: calc(100vh - 25vh); 
+        height: calc(100vh - 20vh); 
         overflow-x: auto; 
         overflow-y: auto;
         margin: 0 auto;
@@ -104,26 +114,19 @@
         color: #fbfcfc
     }
 
-    #footer {
-        position: fixed;
-        width: 100vw;
-        height: 15vh;
-        text-align: center;          /* Footer height */
-        background-color: #f7f7f7;
-    }
-
     .row {
         display: flex;
     }
 
     .column {
-        padding-top: 2vh;
+        padding-top: 1vh;
         flex: 16.6667vw;
     }
 
     .fa {
-        padding: 1vh;
         font-size: 3vmin;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
         width: 7vw;
         text-align: center;
         text-decoration: none;
@@ -158,6 +161,16 @@
         background: black;
         color: white;
     }
+
+    @media only screen and (max-device-width : 480px) {
+    #footer {
+        display: none;
+
+    }
+    .last-updated {
+        display: none;
+    }
+}
 </style>
 {% endblock %}
 
@@ -270,11 +283,12 @@ Profiles
 </div>
 
 <div class="clearfix float-my-children">
-    <img src="{{ url_for('static', filename='Jackson_Muraika.jpeg') }}" width=200>
-    <div>Treasurer: Jackson Muraika</div>
-    <p class = 'content-p'>Jackson is a junior from Hershey, PA studying Economics and Statistics. He is a die-hard New York Giants fan who
-    closely follows the NFL, NBA, and pro tennis. Beyond his studies, Jackson is an avid photographer who is always working
-    on new projects. Jackson loves to play tennis and listen to music in his free time as well.</p>
+    <img src="{{ url_for('static', filename='Amichai_Schleifer.jpg') }}" width=200>
+    <div>Treasurer: Amichai Schleifer</div>
+    <p class = 'content-p'>Amichai is a sophomore from NYC studying Economics and Psychology and is interested in human decision making as well as
+    business and entrepreneurship. He is passionate about basketball and baseball as well as Formula 1 and is a die hard
+    Knicks and Yankees fan. In his free time he loves to play tennis and chess, go on long bike rides, and spend time
+    outdoors with friends.</p>
 </div>
 </div>
 {% endblock %}
