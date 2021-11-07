@@ -175,16 +175,6 @@
         color: white;
     }
 
-    @media only screen and (max-device-width : 480px) {
-    #footer {
-        display: none;
-
-    }
-    .last-updated {
-        display: none;
-    }
-}
-
     /* The Modal (background) */
     .modal {
     display: none;
@@ -216,10 +206,11 @@
     /* The Close Button */
     .close {
     color: white;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
+    position: fixed;
+    z-index: 1;
+    top: 10vh;
+    left: 73vw;
+    font-size: 5vmin;
     font-weight: bold;
     }
 
@@ -240,23 +231,22 @@
     .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
+    top: 30vh;
+    left: 0vw;
+    padding: 3vmin;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 3vmin;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 2vmin 0 0 2vmin;
     user-select: none;
     -webkit-user-select: none;
     }
 
     /* Position the "next button" to the right */
     .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    left: 46vw;
+    border-radius: 0 2vmin 2vmin 0;
     }
 
     /* On hover, add a black background color with a little bit see-through */
@@ -265,23 +255,25 @@
     background-color: rgba(0, 0, 0, 0.8);
     }
 
-    /* Number text (1/3 etc) */
-    .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-    }
-
     img.hover-shadow {
     transition: 0.3s;
     }
 
     .hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2vmin 2vmin 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     }
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #footer {
+        display: none;
+
+    }
+    .last-updated {
+        display: none;
+    }
+
+}
 </style>
 {% endblock %}
 
@@ -372,7 +364,6 @@ Profiles
     <div class="modal-content">
 
         <div class="mySlides">
-            <div class="numbertext">1 / 13</div>
             <img src="{{ url_for('static', filename='Sean_Li.JPG') }}" style="height:60vh">
             <h6><b><u>President: Sean Li</u></b></h6>
             <p class="content-p">Sean is a sophomore from Chicago, IL studying Statistics and Computer Science. He follows NBA and NCAA basketball and is
@@ -381,7 +372,6 @@ Profiles
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">2 / 13</div>
             <img src="{{ url_for('static', filename='Ben_Thorpe.JPG') }}" style="height:60vh">
             <h6><b><u>Chief Analytics Officer: Ben Thorpe</u></b></h6>
             <p class="content-p">Ben is a sophomore from Miami, FL planning on majoring in data science. He is a huge Miami Heat, Miami Dolphins, and
@@ -390,7 +380,6 @@ Profiles
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">3 / 13</div>
             <img src="{{ url_for('static', filename='Piper_Hampsch.jpg') }}" style="height:60vh">
             <h6><b><u>VP of Communications: Piper Hampsch</u></b></h6>
             <p class="content-p">Piper is a third-year student-athlete pursuing a degree in Statistics with minors in Computer Science and Philosophy.
@@ -402,7 +391,6 @@ Profiles
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">4 / 13</div>
             <img src="{{ url_for('static', filename='Bryce_Grove.png') }}" style="height:60vh">
             <h6><b><u>VP of External Relations: Bryce Grove</u></b></h6>
             <p class="content-p">Bryce is a junior from Phoenix, AZ studying Economics and Finance, and he is currently serving as the Vice President of
@@ -413,7 +401,6 @@ Profiles
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">5 / 13</div>
             <img src="{{ url_for('static', filename='Jack_Lichtenstein.jpg') }}" style="height:60vh">
             <h6><b><u>VP of Analytics: Jack Lichtenstein</u></b></h6>
             <p class="content-p">Jack is a senior from New Jersey studying Data Science. He is a video scout and data analyst for the Duke men’s
@@ -421,7 +408,6 @@ Profiles
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">6 / 13</div>
             <img src="{{ url_for('static', filename='Luke_Thomas.jpg') }}" style="height:60vh">
             <h6><b><u>VP of Analytics: Luke Thomas</u></b></h6>
             <p class="content-p">Luke is a sophomore from Charlotte, North Carolina studying computer science and statistics. He’s played soccer his
@@ -431,7 +417,6 @@ Profiles
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">7 / 13</div>
             <img src="{{ url_for('static', filename='Chase_Johnson.JPG') }}" style="height:60vh">
             <h6><b><u>VP of Analytics: Chase Johnson</u></b></h6>
             <p class="content-p">Chase is a sophomore from Hickory, NC (about an hour north of Charlotte), with interests in Math and Statistics. He is a
@@ -441,7 +426,6 @@ Profiles
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">8 / 13</div>
             <img src="{{ url_for('static', filename='Brian_Janger.jpg') }}" style="height:60vh">
             <h6><b><u>VP of Analytics: Brian Janger</u></b></h6>
             <p class="content-p">Brian is from Houston, Texas and is a sophomore here at Duke. He intends to complete the interdepartmental major track
@@ -452,7 +436,6 @@ Profiles
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">9 / 13</div>
             <img src="{{ url_for('static', filename='Hillary_Lee.jpg') }}" style="height:60vh">
             <h6><b><u>VP of Analytics: Hillary Lee</u></b></h6>
             <p class="content-p">Hillary is a sophomore from Incheon, South Korea studying Economics and Statistics. She is a huge volleyball fan and
@@ -461,7 +444,6 @@ Profiles
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">10 / 13</div>
             <img src="{{ url_for('static', filename='Caleb_Woo.JPG') }}" style="height:60vh">
             <h6><b><u>VP of Technology: Caleb Woo</u></b></h6>
             <p class="content-p">Caleb is a senior from Basking Ridge, NJ majoring in Data Science and minoring in Music. While he follows soccer,
@@ -470,7 +452,6 @@ Profiles
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">11 / 13</div>
             <img src="{{ url_for('static', filename='Luke_Josephy.jpg') }}" style="height:60vh">
             <h6><b><u>VP of Technology: Lucas Josephy</u></b></h6>
             <p class="content-p">Lucas is a junior from Jericho, New York majoring in Electrical and Computer Engineering and Computer Science. He is a
@@ -479,7 +460,6 @@ Profiles
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">12 / 13</div>
             <img src="{{ url_for('static', filename='Angel_Chaudhary.jpeg') }}" style="height:60vh">
             <h6><b><u>Editor in Chief: Angel Chaudhary</u></b></h6>
             <p class="content-p">Angel is a junior from Bear, Delaware studying Computer Science and Decision Science. She has played tennis and
@@ -488,7 +468,6 @@ Profiles
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">13 / 13</div>
             <img src="{{ url_for('static', filename='Amichai_Schleifer.jpg') }}" style="height:60vh">
             <h6><b><u>Treasurer: Amichai Schleifer</u></b></h6>
             <p class="content-p">Amichai is a sophomore from NYC studying Economics and Psychology and is interested in human decision making as well as
