@@ -32,7 +32,6 @@
     .post_pic {
         float: left;
         padding: 1vmin;
-        max-width: 20vw;
         max-height: 20vh;
     }
 
@@ -96,6 +95,10 @@
     /* Style links on mouse-over */
     .sidebar a:hover {
         color: #f1f1f1;
+    }
+
+    .social-sidebar {
+        display: none;
     }
 
     div.container {
@@ -175,6 +178,19 @@
         }
         .last-updated {
             display: none;
+        }
+        .social-sidebar {
+                display: block;
+                padding-top: 2vh;
+                padding-left: 1vw;
+        }
+        .social-sidebar .social-sidebar-row {
+            display: flex;
+            padding-bottom: 2vh;
+        }
+        .fa-github {
+        background: black;
+        color: white;
         }
     }
 </style>
