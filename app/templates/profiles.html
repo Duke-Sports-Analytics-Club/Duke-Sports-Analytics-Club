@@ -19,14 +19,12 @@
         font-family: "Karma", sans-serif;
         background-color: #2e6387;
         color: #fbfcfc;
-        padding-left: 10vw;
     }
 
     .subtitle-p {
         text-align: center;
         font-family: "Karma", sans-serif;
-        background-color: #2e6387;
-        color: #fbfcfc;
+        color: #2e6387;
     }
 
     .content-p {
@@ -53,7 +51,7 @@
         height: 10vh;
         width: 100vw;
         text-align: center;
-        background-color: #f7f7f7;
+        background-color: #fbfcfc;
     }
 
     .last-updated {
@@ -93,7 +91,7 @@
 
     /* Style links on mouse-over */
     .sidebar a:hover {
-        color: #f1f1f1;
+        color: #fbfcfc;
     }
 
     .social-sidebar {
@@ -101,12 +99,14 @@
     }
 
     div.scroll {
-        height: calc(100vh - 20vh); 
+        height: calc(100vh - 20vh);
+        width: 80vw;
         overflow-x: auto; 
         overflow-y: auto;
         margin: 0 auto;
         padding-top: 5vh;
-        padding-left: 10vw;
+        margin-left: 10vw;
+        background-color: #fbfcfc;
     }
 
     p {
@@ -132,12 +132,12 @@
         display: flex;
     }
 
-    .column_profiles_top_bottom {
+    .column_profiles_4 {
         flex: 25vw;
     }
 
-    .column_profiles_middle {
-        flex: 20vw;
+    .column_profiles_1 {
+        padding-left: 5vw;
     }
 
     .fa {
@@ -264,7 +264,10 @@
     }
 
     img.hover-shadow {
+    height: 130px;
+    width: 130px;
     transition: 0.3s;
+    border-radius: 50%;
     }
 
     .hover-shadow:hover {
@@ -335,77 +338,81 @@ Profiles
 {% block content %}
 <div class="scroll">
 <div class="row_profiles">
-    <div class="column_profiles_top_bottom">
-        <img src="{{ url_for('static', filename='Sean_Li.JPG') }}" onclick="openModal();currentSlide(1)"
-            class="hover-shadow" height=130vh>
-        <p class="subtitle-p">President: Sean Li</p>
+    <div class="column_profiles_4">
+        <img src="{{ url_for('static', filename='Sean_Li.JPG') }}" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        <p class="subtitle-p">President:<br>Sean Li</p>
     </div>
-    <div class="column_profiles_top_bottom">
+    <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Ben_Thorpe.JPG') }}" onclick="openModal();currentSlide(2)"
-            class="hover-shadow" height=130vh>
-        <p class="subtitle-p">Chief Analytics Officer: Ben Thorpe</p>
+                class="hover-shadow">
+        <p class="subtitle-p">Chief Analytics Officer:<br>Ben Thorpe</p>
     </div>
-    <div class="column_profiles_top_bottom">
+    <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Piper_Hampsch.jpg') }}" onclick="openModal();currentSlide(3)"
-            class="hover-shadow" height=130vh>
-        <p class="subtitle-p">VP of Communications: Piper Hampsch</p>
+                class="hover-shadow">
+        <p class="subtitle-p">VP of Communications:<br>Piper Hampsch</p>
     </div>
-    <div class="column_profiles_top_bottom">
+    <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Bryce_Grove.png') }}" onclick="openModal();currentSlide(4)"
-            class="hover-shadow" height=130vh>
-        <p class="subtitle-p">VP of External Relations: Bryce Grove</p>
+                class="hover-shadow">
+        <p class="subtitle-p">VP of External Relations:<br>Bryce Grove</p>
     </div>
 </div>
 
 <div class="row_profiles">
-    <div class="column_profiles_middle">
+    <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Jack_Lichtenstein.jpg') }}" onclick="openModal();currentSlide(5)"
             class="hover-shadow" , height=130vh>
         <p class="subtitle-p">VP of Analytics: Jack Lichtenstein</p>
     </div>
-    <div class="column_profiles_middle">
+    <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Luke_Thomas.jpg') }}" onclick="openModal();currentSlide(6)"
             class="hover-shadow" height=130vh>
         <p class="subtitle-p">VP of Analytics: Luke Thomas</p>
     </div>
-    <div class="column_profiles_middle">
+    <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Chase_Johnson.JPG') }}" onclick="openModal();currentSlide(7)"
             class="hover-shadow" height=130vh>
         <p class="subtitle-p">VP of Analytics: Chase Johnson</p>
     </div>
-    <div class="column_profiles_middle">
+    <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Brian_Janger.jpg') }}" onclick="openModal();currentSlide(8)"
             class="hover-shadow" height=130vh>
         <p class="subtitle-p">VP of Analytics: Brian Janger</p>
     </div>
-    <div class="column_profiles_middle">
+</div>
+
+<div class="row_profiles">
+    <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Hillary_Lee.jpg') }}" onclick="openModal();currentSlide(9)"
             class="hover-shadow" height=130vh>
         <p class="subtitle-p">VP of Analytics: Hillary Lee</p>
     </div>
-</div>
-
-<div class="row_profiles">
-    <div class="column_profiles_top_bottom">
+    <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Caleb_Woo.JPG') }}" onclick="openModal();currentSlide(10)"
             class="hover-shadow" , height=130vh>
-        <p class="subtitle-p">VP of Technology: Caleb Woo</p>
+            <a href="https://www.linkedin.com/in/caleb-woo/">
+                <p class="subtitle-p">VP of Technology: Caleb Woo</p>
+            </a>
     </div>
-    <div class="column_profiles_top_bottom">
+    <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Luke_Josephy.jpg') }}" onclick="openModal();currentSlide(11)"
             class="hover-shadow" height=130vh>
         <p class="subtitle-p">VP of Technology: Lucas Josephy</p>
     </div>
-    <div class="column_profiles_top_bottom">
+    <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Angel_Chaudhary.jpeg') }}" onclick="openModal();currentSlide(12)"
             class="hover-shadow" height=130vh>
         <p class="subtitle-p">Editor in Chief: Angel Chaudhary</p>
     </div>
-    <div class="column_profiles_top_bottom">
-        <img src="{{ url_for('static', filename='Amichai_Schleifer.jpg') }}" onclick="openModal();currentSlide(13)"
-            class="hover-shadow" height=130vh>
-        <p class="subtitle-p">Treasurer: Amichai Schleifer</p>
-    </div>
+</div>
+
+<div class="row_profiles">
+<div class="column_profiles_1">
+    <img src="{{ url_for('static', filename='Amichai_Schleifer.jpg') }}" onclick="openModal();currentSlide(13)"
+        class="hover-shadow" height=130vh>
+    <p class="subtitle-p">Treasurer: Amichai Schleifer</p>
+</div>
 </div>
 </div>
 
@@ -506,7 +513,9 @@ Profiles
         <div class="mySlides">
             <h6><b><u>VP of Technology</u></b></h6>
             <img src="{{ url_for('static', filename='Caleb_Woo.JPG') }}" class="modal-image">
-            <h6><b><u>Caleb Woo</u></b></h6>
+            <a href="https://www.linkedin.com/in/caleb-woo/">
+                <h6><b><u>Caleb Woo</u></b></h6>
+            </a>
             <p class="content-p">Caleb is a senior from Basking Ridge, NJ majoring in Data Science and minoring in Music. While he follows soccer,
             basketball, and football, his main passion is baseball and rooting for the New York Yankees. Outside of DSAC, Caleb
             enjoys studying the saxophone, watching YouTube videos, and sleeping.</p>
