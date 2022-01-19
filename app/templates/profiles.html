@@ -24,7 +24,7 @@
     .subtitle-p {
         text-align: center;
         font-family: "Karma", sans-serif;
-        color: #2e6387;
+        color: #fbfcfc;
     }
 
     .content-p {
@@ -106,7 +106,6 @@
         margin: 0 auto;
         padding-top: 5vh;
         margin-left: 10vw;
-        background-color: #fbfcfc;
     }
 
     p {
@@ -268,6 +267,7 @@
     width: 130px;
     transition: 0.3s;
     border-radius: 50%;
+    object-fit: cover;
     }
 
     .hover-shadow:hover {
@@ -339,7 +339,7 @@ Profiles
 <div class="scroll">
 <div class="row_profiles">
     <div class="column_profiles_4">
-        <img src="{{ url_for('static', filename='Sean_Li.JPG') }}" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        <img src="{{ url_for('static', filename='Sean_Li.JPG') }}" onclick="openModal();currentSlide(1)" class="hover-shadow" top=-500px>
         <p class="subtitle-p">President:<br>Sean Li</p>
     </div>
     <div class="column_profiles_4">
@@ -362,56 +362,56 @@ Profiles
 <div class="row_profiles">
     <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Jack_Lichtenstein.jpg') }}" onclick="openModal();currentSlide(5)"
-            class="hover-shadow" , height=130vh>
-        <p class="subtitle-p">VP of Analytics: Jack Lichtenstein</p>
+            class="hover-shadow">
+        <p class="subtitle-p">VP of Analytics:<br>Jack Lichtenstein</p>
     </div>
     <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Luke_Thomas.jpg') }}" onclick="openModal();currentSlide(6)"
-            class="hover-shadow" height=130vh>
-        <p class="subtitle-p">VP of Analytics: Luke Thomas</p>
+            class="hover-shadow">
+        <p class="subtitle-p">VP of Analytics:<br>Luke Thomas</p>
     </div>
     <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Chase_Johnson.JPG') }}" onclick="openModal();currentSlide(7)"
-            class="hover-shadow" height=130vh>
-        <p class="subtitle-p">VP of Analytics: Chase Johnson</p>
+            class="hover-shadow">
+        <p class="subtitle-p">VP of Analytics:<br>Chase Johnson</p>
     </div>
     <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Brian_Janger.jpg') }}" onclick="openModal();currentSlide(8)"
-            class="hover-shadow" height=130vh>
-        <p class="subtitle-p">VP of Analytics: Brian Janger</p>
+            class="hover-shadow">
+        <p class="subtitle-p">VP of Analytics:<br>Brian Janger</p>
     </div>
 </div>
 
 <div class="row_profiles">
     <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Hillary_Lee.jpg') }}" onclick="openModal();currentSlide(9)"
-            class="hover-shadow" height=130vh>
-        <p class="subtitle-p">VP of Analytics: Hillary Lee</p>
+            class="hover-shadow">
+        <p class="subtitle-p">VP of Analytics:<br>Hillary Lee</p>
     </div>
     <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Caleb_Woo.JPG') }}" onclick="openModal();currentSlide(10)"
-            class="hover-shadow" , height=130vh>
+            class="hover-shadow">
             <a href="https://www.linkedin.com/in/caleb-woo/">
-                <p class="subtitle-p">VP of Technology: Caleb Woo</p>
+                <p class="subtitle-p">VP of Technology:<br>Caleb Woo</p>
             </a>
     </div>
     <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Luke_Josephy.jpg') }}" onclick="openModal();currentSlide(11)"
-            class="hover-shadow" height=130vh>
-        <p class="subtitle-p">VP of Technology: Lucas Josephy</p>
+            class="hover-shadow">
+        <p class="subtitle-p">VP of Technology:<br>Lucas Josephy</p>
     </div>
     <div class="column_profiles_4">
         <img src="{{ url_for('static', filename='Angel_Chaudhary.jpeg') }}" onclick="openModal();currentSlide(12)"
-            class="hover-shadow" height=130vh>
-        <p class="subtitle-p">Editor in Chief: Angel Chaudhary</p>
+            class="hover-shadow">
+        <p class="subtitle-p">Editor in Chief:<br>Angel Chaudhary</p>
     </div>
 </div>
 
 <div class="row_profiles">
 <div class="column_profiles_1">
     <img src="{{ url_for('static', filename='Amichai_Schleifer.jpg') }}" onclick="openModal();currentSlide(13)"
-        class="hover-shadow" height=130vh>
-    <p class="subtitle-p">Treasurer: Amichai Schleifer</p>
+        class="hover-shadow">
+    <p class="subtitle-p">Treasurer:<br>Amichai Schleifer</p>
 </div>
 </div>
 </div>
