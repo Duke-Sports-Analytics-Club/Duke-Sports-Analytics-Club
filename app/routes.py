@@ -25,3 +25,7 @@ def resources():
 @app.route('/tutorial_post', methods=['GET'])
 def tutorial_post():
     return render_template("tutorial_post.html")
+
+@app.route('/NBA_Fouls_Survivorship_Model', methods=['GET'])
+def nba_fouls_survivorship_model():
+    return render_template("NBA_Fouls_Survivorship_Model.html")

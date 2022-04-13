@@ -204,9 +204,10 @@ Projects
 
 <div class="container">
     <div class="scroll">
+
         <div style='padding-left:12vw;'>
             <a href="{{ url_for('tutorial_post') }}">
-                <img class="post_pic" src="static/tutorialProject.jpg" width="150" height="150">
+                <img class="post_pic" src="static/tutorialProject.jpg" width="15%">
             </a>
         </div>
         <div style='padding-left:12vw;'>
@@ -215,6 +216,21 @@ Projects
             <p class="post_text">The goal of this post is to familiarize R programming beginners with some public sports data sources.
                 Specifically, we will look at scraping sports-reference.com ’s college basketball data and then making some
                 visualizations. Let’s get started!</p>
+        </div>
+
+        <div style='padding-left:12vw;'>
+            <a href="{{ url_for('nba_fouls_survivorship_model') }}">
+                <img class="post_pic" src="static/NBA_Fouls_Survivorship_Model.png" width="15%">
+            </a>
+        </div>
+        <div style='padding-left:12vw;'>
+            <h6><a href="{{ url_for('nba_fouls_survivorship_model') }}">NBA Fouls Survivorship Model</a></h6>
+            <p class="post_text">By: Bryce Grove</p>
+            <p class="post_text">This paper utilizes 2020-2021 NBA Play-by-Play data to help answer the “pull your player”
+                problem. By using historical
+                data to estimate foul rates by position and game time, the paper provides an accurate probability a given player
+                fouls
+                out for each additional minute played.</p>
         </div>
     </div>
 </div>
