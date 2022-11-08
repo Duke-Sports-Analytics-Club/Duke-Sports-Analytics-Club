@@ -29,3 +29,11 @@ def tutorial_post():
 @app.route('/NBA_Fouls_Survivorship_Model', methods=['GET'])
 def nba_fouls_survivorship_model():
     return render_template("NBA_Fouls_Survivorship_Model.html")
+
+@app.route('/nfl_upset', methods=['GET'])
+def nfl_upset():
+    return render_template("nfl_upset.html")
+
+@app.route('/cfb_coach', methods=['GET'])
+def cfb_coach():
+    return render_template("cfb_coach.html")

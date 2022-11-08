@@ -206,16 +206,30 @@ Projects
     <div class="scroll">
 
         <div style='padding-left:12vw;'>
-            <a href="{{ url_for('tutorial_post') }}">
-                <img class="post_pic" src="static/tutorialProject.jpg" width="15%">
+            <a href="{{ url_for('cfb_coach') }}">
+                <img class="post_pic" src="static/cfb_coach.jpeg" width="15%">
             </a>
         </div>
         <div style='padding-left:12vw;'>
-            <h6><a href="{{ url_for('tutorial_post') }}">Tutorial Post</a></h6>
-            <p class="post_text">By: Jack Lichtenstein</p>
-            <p class="post_text">The goal of this post is to familiarize R programming beginners with some public sports data sources.
-                Specifically, we will look at scraping sports-reference.com ’s college basketball data and then making some
-                visualizations. Let’s get started!</p>
+            <h6><a href="{{ url_for('cfb_coach') }}">Measuring the Impact of NCAA Football Head Coach Changes</a></h6>
+            <p class="post_text">By: Jack Miller, Alex Jackson, Bryce Grove</p>
+            <p class="post_text">This project aims to quantify the impact of first-year NCAA football coaches.
+                The scope of this project is NCAA Division 1 programs who have made head coaching changes in the last 10 seasons.
+                The project compares metrics like win percentage to contruct linear regression models to ultimately quantify 
+                and predict the impact of first-year coaches.</p>
+        </div>
+
+        <div style='padding-left:12vw;'>
+            <a href="{{ url_for('nfl_upset') }}">
+                <img class="post_pic" src="static/nfl_upset.jpeg" width="15%">
+            </a>
+        </div>
+        <div style='padding-left:12vw;'>
+            <h6><a href="{{ url_for('nfl_upset') }}">Predicting NFL Upsets Using Multilevel Logistic Regression</a></h6>
+            <p class="post_text">By: Jack Miller</p>
+            <p class="post_text">This goal of this project is to predict upsets in NFL games using multilevel logistic
+                regression. The project utilizes NFL play-by-play and schedule data to create a model to discover which 
+                variables are the best predictors of an upset.</p>
         </div>
 
         <div style='padding-left:12vw;'>
@@ -231,6 +245,19 @@ Projects
                 data to estimate foul rates by position and game time, the paper provides an accurate probability a given player
                 fouls
                 out for each additional minute played.</p>
+        </div>
+
+        <div style='padding-left:12vw;'>
+            <a href="{{ url_for('tutorial_post') }}">
+                <img class="post_pic" src="static/tutorialProject.jpg" width="15%">
+            </a>
+        </div>
+        <div style='padding-left:12vw;'>
+            <h6><a href="{{ url_for('tutorial_post') }}">Tutorial Post</a></h6>
+            <p class="post_text">By: Jack Lichtenstein</p>
+            <p class="post_text">The goal of this post is to familiarize R programming beginners with some public sports data sources.
+                Specifically, we will look at scraping sports-reference.com ’s college basketball data and then making some
+                visualizations. Let’s get started!</p>
         </div>
     </div>
 </div>
