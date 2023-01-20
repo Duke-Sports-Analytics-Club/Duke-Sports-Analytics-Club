@@ -37,3 +37,7 @@ def nfl_upset():
 @app.route('/cfb_coach', methods=['GET'])
 def cfb_coach():
     return render_template("cfb_coach.html")
+
+@app.route('/kershaw', methods=['GET'])
+def kershaw():
+    return render_template("kershaw.html")
