@@ -204,6 +204,20 @@ Projects
 
 <div class="container">
     <div class="scroll">
+    
+        <div style='padding-left:12vw;'>
+            <a href="{{ url_for('mbappe') }}">
+                <img class="post_pic" src="static/mbappe.jpeg" width="15%">
+            </a>
+        </div>
+        <div style='padding-left:12vw;'>
+            <h6><a href="{{ url_for('mbappe') }}">Predicting Sports Bets within the FIFA 2022 World Cup</a></h6>
+            <p class="post_text">By: Sean Li, Aaditya Warrier, Christina Yoh, Brian Janger</p>
+            <p class="post_text">This project aims to build a predictive model for the FIFA 2022 World Cup. 
+                The model predicts goal line bets and money line bets and tries to find margins against the sportsbooks, 
+                comparing odds to sportsbooks to determine which bets are more likely to be profitable.
+            </p>
+        </div>
 
         <div style='padding-left:12vw;'>
             <a href="{{ url_for('kershaw') }}">
@@ -272,6 +286,7 @@ Projects
                 Specifically, we will look at scraping sports-reference.com ’s college basketball data and then making some
                 visualizations. Let’s get started!</p>
         </div>
+        
     </div>
 </div>
 {% endblock %}

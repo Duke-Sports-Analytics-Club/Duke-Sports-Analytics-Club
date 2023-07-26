@@ -41,3 +41,7 @@ def cfb_coach():
 @app.route('/kershaw', methods=['GET'])
 def kershaw():
     return render_template("kershaw.html")
+
+@app.route('/mbappe', methods=['GET'])
+def mbappe():
+    return render_template("mbappe.html")
