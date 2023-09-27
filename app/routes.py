@@ -45,3 +45,7 @@ def kershaw():
 @app.route('/mbappe', methods=['GET'])
 def mbappe():
     return render_template("mbappe.html")
+
+@app.route('/lefthand', methods=['GET'])
+def lefthand():
+    return render_template("lefthand.html")
