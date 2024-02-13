@@ -189,103 +189,6 @@ Resources
 {% block content %}
 <div class="scroll">
 
-    <h4><b>Conferences</b></h4>
-    <ul>
-        <a href="http://stat.cmu.edu/cmsac/conference/2021/">
-            <li>Carnegie Mellon Sports Analytics Conference</li></a>
-        <ul>
-            <li>November 6-7, 2021</li>
-        </ul>
-
-        <a href="https://www.nhl.com/bluejackets/team/cbj-analytics-conference#:~:text=The%20CBJ%20Hockey%20Analytics%20Conference,done%20by%20industry%20professionals%20today.">
-            <li>Columbus Blue Jackets Hockey Analytics Conference</li>
-        </a>
-        <ul>
-            <li>February 2022</li>
-        </ul>
-
-        <a href="https://www.witinc.com/great-lakes-data-summit">
-            <li>Great Lakes Analytics Conference</li>
-        </a>
-        <ul>
-            <li>March 10, 2022</li>
-        </ul>
-
-        <a href="http://www.mathsportinternational.com/">
-            <li>MathSport International</li>
-        </a>
-        <ul>
-            <li>June/July 2022</li>
-        </ul>
-
-        <a href="https://www.sloansportsconference.com/">
-            <li>MIT Sloan Sports Analytics Conference</li>
-        </a>
-        <ul>
-            <li>March 4-5, 2022</li>
-        </ul>
-        <a href="http://nessis.org/">
-            <li>New England Symposium on Statistics in Sports</li>
-        </a>
-        <ul>
-            <li>Friday afternoons during the month of October, 2021</li>
-        </ul>
-        <a href="https://www.youtube.com/playlist?list=PL9Az6mi38hv9Y1CNUXfjgxoawTxgMQu2M">
-            <li>OptaPro Forum</li>
-        </a>
-        <ul>
-            <li>YouTube videos</li>
-        </ul>
-        <a href="https://www.youtube.com/channel/UC6622EYQm6BcOYBl_aM7rhw/videos">
-            <li>Ottawa Hockey Analytics Conference at Carleton</li>
-        </a>
-        <ul>
-            <li>YouTube videos</li>
-        </ul>
-        <a href="https://www.rit.edu/science/sports-analytics-conference">
-            <li>Rochester Institute of Technology Sports Analytics Conference</li>
-        </a>
-        <ul>
-            <li>Dates TBD</li>
-        </ul>
-        <a href="https://sabr.org/events">
-            <li>SABR Analytics Conference</li>
-        </a>
-        <ul>
-            <li>March 18-20, 2022</li>
-        </ul>
-        <a href="https://sports-ideas.com/">
-            <li>Sports IDEAS Symposium</li>
-        </a>
-        <ul>
-            <li>Dates TBD</li>
-        </ul>
-        <a href="https://statsbomb.com/conference/">
-            <li>StatsBomb Innovation in Football Conference</li>
-        </a>
-        <ul>
-            <li>October 8, 2021</li>
-        </ul>
-        <a href="https://www.youtube.com/channel/UCx7Ghivm_HW6935FdubecBA/videos">
-            <li>Seattle Hockey Analytics Conference</li>
-        </a>
-        <ul>
-            <li>YouTube videos</li>
-        </ul>
-        <a href="https://statds.org/events/ucsas2021/">
-            <li>UConn Sports Analytics Symposium</li>
-        </a>
-        <ul>
-            <li>October 9, 2021</li>
-        </ul>
-        <a href="https://www.youtube.com/playlist?list=PLLg_vDyk8Xl89DRQ48e0WYOl80fIM1Avs">
-            <li>Vancouver Hockey Analytics Conference</li>
-        </a>
-        <ul>
-            <li>YouTube videos</li>
-        </ul>
-    </ul>
-
     <h4><b>Data</b></h4>
     <ul>
         <a href="https://www.kaggle.com">
@@ -328,21 +231,21 @@ Resources
         </ul>
 
         <a href="https://www.sports-reference.com/cbb/">
-            <li>Sports Reference</li>
+            <li>CBB Reference</li>
         </a>
         <ul>
             <li>Most comprehensive data source for MBB</li>
         </ul>
 
         <a href="https://www.pro-football-reference.com">
-            <li>Football Reference</li>
+            <li>Pro Football Reference</li>
         </a>
         <ul>
             <li>Most comprehensive data source for NFL</li>
         </ul>
 
         <a href="https://fbref.com/en/">
-            <li>FB Reference</li>
+            <li>Soccer Reference</li>
         </a>
         <ul>
             <li>Most comprehensive data source for professional Soccer</li>
@@ -356,10 +259,17 @@ Resources
         </ul>
 
         <a href="https://www.baseball-reference.com">
-            <li>MLB Reference</li>
+            <li>Baseball Reference</li>
         </a>
         <ul>
             <li>Most comprehensive data source for MLB</li>
+        </ul>
+
+        <a href="https://www.retrosheet.org/game.htm">
+            <li>RetroSheet</li>
+        </a>
+        <ul>
+            <li>Complete play-by-play data for all MLB games from 1912-present</li>
         </ul>
 
         <a href="http://Hockey-Reference.com">
@@ -369,15 +279,10 @@ Resources
             <li>Most comprehensive data source for NHL</li>
         </ul>
 
-        <a href="https://community.amstat.org/sis/sportsdataresources">
-            <li>Sports Data Resources</li>
-        </a>
-        <ul>
-            <li>General list of databases for a variety of sports</li>
-        </ul>
+        
     </ul>
 
-    <h4><b>R packages</b></h4>
+    <h4><b>R Packages</b></h4>
     <ul>
         <a href="https://www.nflfastr.com">
             <li>nflfastR</li>
@@ -386,7 +291,7 @@ Resources
             <li>Website for R package, nflfastR, which has many useful functions and datasets for analyzing the NFL</li>
         </ul>
     
-        <a href="https://gist.github.com/spfleming/2527a6ca2b940af2a8aa1fee9320171d">
+        <a href="https://github.com/saiemgilani/cfbscrapR">
             <li>cfbscrapR</li>
         </a>
         <ul>
@@ -413,16 +318,18 @@ Resources
         <ul>
             <li>R package to scrape Kenpom (team specific data requires subscription)</li>
         </ul>
-    </ul>
 
-    <h4><b>Learning</b></h4>
-    <ul>
-        <a href="https://docs.google.com/document/d/1fWET_GreI5qO2E-DDDojsmlfNeoQgZaCji-4D5M3PmA/edit?usp=sharing">
-            <li>DSAC Learning R</li>
+        <a href="https://github.com/lbenz730/ncaahoopR">
+            <li>ncaahoopR</li>
         </a>
         <ul>
-            <li>Resources and a recommended learning pathway for R</li>
+            <li>R package with play-by-play for CBB</li>
         </ul>
+    </ul>
+
+    <h4><b>Learning Resources</b></h4>
+    <ul>
+        
         <a href="https://techgraphs.fangraphs.com/how-to-use-r-for-sports-stats-part-1-the-absolute-basics/">
             <li>How to Use R for Sports</li>
         </a>
@@ -438,6 +345,145 @@ Resources
             2021, with the goal of estimating optimal run/pass ratios by field position in the NFL. Excellent example of stunning
             dataviz, as well as what it looks like to work a project through to completion.</li>
         </ul>
+
+        <a href="https://phdemotions.medium.com/resources-for-learning-sports-analytics-coding-3551bfcc4af">
+            <li>Resources for Learning Sports Analytics Coding</li>
+        </a>
+        <ul>
+            <li>Well-compiled list of sources for how to get started with resources depending on the sport</li>
+        </ul>
+        <a href="https://docs.google.com/document/d/1fWET_GreI5qO2E-DDDojsmlfNeoQgZaCji-4D5M3PmA/edit?usp=sharing">
+            <li>DSAC Learning R</li>
+        </a>
+        <ul>
+            <li>Resources and a recommended learning pathway for R</li>
+        </ul>
+    </ul>
+
+    <h4><b>Internship Resources</b></h4>
+    <ul>
+        <a href="https://www.teamworkonline.com/">
+            <li>Teamworkonline</li></a>
+        <ul>
+            <li>By far the best resource online for jobs in sports (not necessarily analytics)
+            </li>
+        </ul>
+
+        <a href="https://www.workinsports.com/t-internship-jobs.html">
+            <li>WorkInSports</li>
+        </a>
+        <ul>
+            <li>Not as many but some good internship postings on here</li>
+        </ul>
+
+        <a href="https://www.indeed.com/q-2024-sports-analytics-internship-jobs.html?vjk=8c2ea7ddabb2fe89">
+            <li>Indeed</li>
+        </a>
+        <ul>
+            <li>Can always find internship opportunities on Indeed</li>
+        </ul>
+
+        <a href="https://www.mlb.com/careers/club-careers">
+            <li>MLB</li>
+        </a>
+        <ul>
+            <li>Often MLB teams will post internships on their individual career websites which can be found here</li>
+        </ul>
+
+        <a href="https://careers.nba.com/early-career-programs/">
+            <li>NBA</li>
+        </a>
+        <ul>
+            <li>NBA internship opportunities</li>
+        </ul>
+    </ul>
+
+    <h4><b>Competitions</b></h4>
+    <ul>
+        
+        <a href="https://formal-analysis.com/isace/2024/">
+            <li>International Sports Analytics Conference and Exhibition</li>
+        </a>
+        <ul>
+            <li>15-17 July 2024, Paris, France</li>
+            <li>Paper Submission: 10 March 2024</li>
+        </ul>
+        <a href="https://crossroadsclassicanalyticschallenge.com/">
+            <li>Crossroads Classic Analytics Challenge</li>
+        </a>
+        <ul>
+        </ul>
+        <a href="https://sabr.org/analytics/case">
+            <li>2024 Diamond Dollars Case Competition</li>
+        </a>
+        <ul>
+            <li>Held during SABR conference from March 8-10</li>
+        </ul>
+    
+        
+    </ul>
+
+    <h4><b>Conferences</b></h4>
+    <ul>
+        <a href="https://www.sloansportsconference.com/">
+            <li>2024 MIT Sloan Sports Analytics Conference</li></a>
+        <ul>
+            <li>March 1 - 2, 2024 at Boston Convention & Exhibition Center in Boston, MA</li>
+        </ul>
+
+        <a href="https://sabr.org/analytics">
+            <li>Society for American Baseball Research Analytics Conference</li>
+        </a>
+        <ul>
+            <li>March 8-10, 2024</li>
+        </ul>
+
+        <a href="https://sciences.ucf.edu/statistics/big-data-analytics-symposium/">
+            <li>UCF Big Data Analytics Symposium 2024</li>
+        </a>
+        <ul>
+            <li>March 14, 2024</li>
+        </ul>
+
+        <a href="https://wsb.wharton.upenn.edu/events-hq/a1WHq00000FtssZMAR/">
+            <li>The 2024 Wharton People Analytics Conference</li>
+        </a>
+        <ul>
+            <li>March 14-15, 2024</li>
+        </ul>
+
+        <a href="https://sportsandsociety.osu.edu/events/4th-sports-analytics-conference-set-april-5-6">
+            <li>The Ohio State University Sports and Society Initiative 4th Sports Analytics Conference</li>
+        </a>
+        <ul>
+            <li>April 5-6, 2024</li>
+        </ul>
+        <a href="https://uconnsportsanalytics.org/">
+            <li>UConn Sports Analytics Symposium (UCSAS)</li>
+        </a>
+        <ul>
+            <li>Date: April 12-13, 2024</li>
+            <li>Location: University of Connecticut, Storrs, CT</li>
+        </ul>
+        <a href="https://www.witinc.com/great-lakes-data-analytics-summit">
+            <li>Great Lakes Data & Analytics Summit</li>
+        </a>
+        <ul>
+            <li>April 18, 2024</li>
+        </ul>
+        <a href="http://www.cascadiasports.com/">
+            <li>The Cascadia Symposium on Statistics in Sports</li>
+        </a>
+        <ul>
+            <li>September 21, 2024</li>
+        </ul>
+        <a href="https://www.stat.cmu.edu/cmsac/">
+            <li>Carnegie Mellon Sports Analytics Conference</li>
+        </a>
+        <ul>
+            <li>Date TBD</li>
+        </ul>
+        
     </ul>
 
 </div>
