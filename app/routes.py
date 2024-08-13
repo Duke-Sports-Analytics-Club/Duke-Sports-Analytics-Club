@@ -49,3 +49,7 @@ def mbappe():
 @app.route('/lefthand', methods=['GET'])
 def lefthand():
     return render_template("lefthand.html")
+
+@app.route('/injury', methods=['GET'])
+def injury():
+    return render_template("injury.html")
